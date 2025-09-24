@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Domain Reserved</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 100px;
+      color: #333;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>This domain is currently reserved.</h1>
+    <p>If you have inquiries regarding this domain, please contact:</p>
+    <p><a id="email-link" href="#">[email protected]</a></p>
+  </div>
+
+  <script>
+    const user = "domain";
+    const domain = "imagedrome.com";
+    const link = "mailto:" + user + "@" + domain;
+    const label = user + "@" + domain;
+
+    document.getElementById("email-link").href = link;
+    document.getElementById("email-link").textContent = label;
+  </script>
+</body>
+</html>
