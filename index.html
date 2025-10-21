@@ -11,13 +11,9 @@
   --side-pad:120px;
   --mid-gap:240px;
   --bottom-pad:84px;
-  --logo-w:420px;
-  --email-w:84px;
-  --main-text-w:400px;
-  --sub-text-w:580px;
 }
-* { box-sizing:border-box; }
-html, body { height:100%; margin:0; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { height:100%; }
 body {
   background:#d03165;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -31,28 +27,25 @@ body {
   align-items:center;
 }
 .logo {
-  width:var(--logo-w);
-  max-width:100%;
-  display:block;
-  height:auto;
-  line-height:0;
+  width:420px; height:auto;
 }
-.mid-gap { height:var(--mid-gap); }
+.mid-gap { height:240px; }
 .stack {
   display:flex;
   flex-direction:column;
   align-items:center;
-  line-height:0;
+  gap:16px;
 }
-.stack img { display:block; height:auto; }
-.email { width:var(--email-w); max-width:100%; cursor:pointer; }
-.main-text { width:var(--main-text-w); max-width:100%; cursor:pointer; }
-.sub-text { width:var(--sub-text-w); max-width:100%; cursor:pointer; }
+.email { width:84px; height:auto; cursor:pointer; max-width:none; }
+.main-text { width:400px; height:auto; cursor:pointer; max-width:none; }
+.sub-text { width:580px; height:auto; cursor:pointer; max-width:none; }
 
 @media (max-width:480px){
-  html, body { height:auto; }
-  .content { padding:120px 24px 60px; }
-  img { max-width:90vw; height:auto; }
+  .content{padding:120px 24px 60px;}
+  .logo{width:70vw;}
+  .email{width:17vw;}
+  .main-text{width:60vw;}
+  .sub-text{width:85vw;}
 }
 </style>
 </head>
