@@ -11,7 +11,6 @@
   --side-pad:60px;
   --mid-gap:120px;
   --bottom-pad:42px;
-
   --logo-w:420px;
   --email-w:42px;
   --main-text-w:200px;
@@ -42,7 +41,7 @@ body{
 .stack img{display:block;height:auto;}
 .email{width:var(--email-w);max-width:100%;cursor:pointer;}
 .main-text{width:var(--main-text-w);max-width:100%;cursor:pointer;}
-.sub-text{width:var(--sub-text-w);max-width:100%;}
+.sub-text{width:var(--sub-text-w);max-width:100%;cursor:pointer;}
 @media (max-width:480px){
   .content{padding:120px 24px 60px;}
   img{max-width:90vw;height:auto;}
@@ -57,7 +56,10 @@ body{
     <div class="stack">
       <a id="emailLink"><img class="email" src="images/email@2x.png" srcset="images/email@1x.png 1x, images/email@2x.png 2x"></a>
       <a id="mainTextLink"><img class="main-text" src="images/main_text@2x.png" srcset="images/main_text@1x.png 1x, images/main_text@2x.png 2x"></a>
-      <img class="sub-text" src="images/sub_text@2x.png" srcset="images/sub_text@1x.png 1x, images/sub_text@2x.png 2x">
+      <!-- 하단 Gmail 링크 추가 -->
+      <a href="https://gmail.com" target="_blank" rel="noopener">
+        <img class="sub-text" src="images/sub_text@2x.png" srcset="images/sub_text@1x.png 1x, images/sub_text@2x.png 2x">
+      </a>
     </div>
   </div>
 </main>
