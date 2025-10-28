@@ -77,10 +77,11 @@ body{
 </main>
 <script>
 (function(){
-  const u='domain', d='imagedrome.com';
-  const mail='mailto:'+u+'@'+d;
-  document.getElementById('emailLink').href=mail;
-  document.getElementById('mainTextLink').href=mail;
+  const u = 'domain', d = 'imagedrome.com';
+  const subject = 'Inquiry from GMALL.COM';
+  const mail = `mailto:${u}@${d}?subject=${encodeURIComponent(subject)}`;
+  document.getElementById('emailLink').href = mail;
+  document.getElementById('mainTextLink').href = mail;
 })();
 </script>
 </body>
