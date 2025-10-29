@@ -91,8 +91,16 @@ body{
   const u = 'domain', d = 'imagedrome.com';
   const subject = 'Inquiry from GMALL.COM';
   const mail = `mailto:${u}@${d}?subject=${encodeURIComponent(subject)}`;
-  document.getElementById('emailLink').href = mail;
-  document.getElementById('mainTextLink').href = mail;
+
+  const emailLink = document.getElementById('emailLink');
+  const mainTextLink = document.getElementById('mainTextLink');
+
+  [emailLink, mainTextLink].forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.open(mail, '_blank');
+    });
+  });
 })();
 </script>
 </body>
